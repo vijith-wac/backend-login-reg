@@ -8,12 +8,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors())
+// app.use(cors())
 
-// app.use(cors({
-//   origin: 'http://localhost:5173', // Vite's default port
-//   credentials: true,              // If you're using cookies
-// }));
+app.use(cors({
+  origin: 'https://frontend-login-reg.vercel.app',
+  credentials: true,
+}));
+
 
 app.use(express.json());
 
